@@ -53,7 +53,7 @@ export default function Home() {
               </div>
             </Reveal>
             <Reveal delay={0.1} className="mx-auto w-full max-w-[320px]">
-              <Phone src="/shots/play-dark.webp" alt="Morse Code playing HELLO WORLD: a mint highlight flows over the current dash and a playhead sweeps the signal waveform" />
+              <Phone src="/shots/type-dark.webp" alt="Morse Code with SOS HEXHAD typed: each letter shown as dots and dashes above the signal waveform" />
             </Reveal>
           </div>
         </section>
@@ -87,7 +87,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="mt-8 md:mt-0 md:w-1/2">
-                  <Phone src="/shots/type-dark.webp" alt="" className="mx-auto max-w-[220px] md:translate-y-10" />
+                  <Phone src="/shots/play-dark.webp" alt="Playing HELLO WORLD: a mint highlight flows over the current dash" className="mx-auto max-w-[220px] md:translate-y-10" />
                 </div>
               </article>
             </Reveal>
