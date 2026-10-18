@@ -4,7 +4,7 @@ export const site = {
   url: "https://hexhad.github.io/morsecode-web",
   /** Matches applicationId in the app's build.gradle. */
   play: "https://play.google.com/store/apps/details?id=com.hexhad.morsecode",
-  email: "hashandharmapriya@gmail.com",
+  email: "hexhad@gmail.com",
   minAndroid: "Android 7.0",
 };
 
