@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+/*
+ * HEXHAD studio tokens (hexhad.github.io/docs/brand.html): Graphite neutrals, one accent
+ * (Cell Mint), Geist. Dark by default like the app; light follows the system.
+ * One radius scale: pills for anything pressable, 28px for panels and media, 16px inside.
+ */
+:root {
+  --bg: #0a0b0d;
+  --bg-raised: #121417;
+  --bg-raised-2: #1a1d21;
+  --fg: #ededef;
+  --muted: #9ba1a8;
+  --faint: #6b7178;
+  --line: rgb(255 255 255 / 0.08);
+  --line-strong: rgb(255 255 255 / 0.16);
+  --mint: #43e0a0;
+  --mint-text: #43e0a0;
+  --on-mint: #04130c;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f4f5f6;
+    --bg-raised: #ffffff;
+    --bg-raised-2: #eceef0;
+    --fg: #0c0e10;
+    --muted: #545a61;
+    --faint: #7d838a;
+    --line: rgb(10 11 13 / 0.08);
+    --line-strong: rgb(10 11 13 / 0.16);
+    --mint-text: #0a7a52;
+    color-scheme: light;
+  }
+}
+
+@theme inline {
+  --color-background: var(--bg);
+  --color-foreground: var(--fg);
+  --color-mint: var(--mint);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  background: var(--bg);
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: color-mix(in srgb, var(--mint) 35%, transparent); }
+:focus-visible { outline: 2px solid var(--mint); outline-offset: 3px; border-radius: 8px; }
+
+/* Morse pills, shared by the demo and the alphabet. */
+.pill { display: inline-block; height: var(--h, 10px); border-radius: 999px; background: currentColor; }
+.pill.dot { width: var(--h, 10px); }
+.pill.dash { width: calc(var(--h, 10px) * 3); }
+
+/* The demo letter label: lifts and turns mint while its letter plays. */
+.letter-label { transition: color 140ms var(--ease-out), transform 260ms cubic-bezier(0.34, 1.56, 0.64, 1); transform-origin: 50% 100%; }
+[data-active="true"] > .letter-label { color: var(--mint-text); transform: scale(1.18); }
+@media (prefers-reduced-motion: reduce) {
+  .letter-label { transition: color 140ms linear; }
+  [data-active="true"] > .letter-label { transform: none; }
+}
