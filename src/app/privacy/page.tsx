@@ -19,7 +19,7 @@ export default function Privacy() {
       <h2>What the app does with your data</h2>
       <ul>
         <li><strong>Your messages</strong> are encoded to Morse on your device and played on the vibration motor. They are not saved and never leave the phone.</li>
-        <li><strong>Settings</strong>: your theme choice (System, Light or Dark, and dynamic color) is saved in the app&apos;s private storage on your device, so it is there next time. Uninstalling the app removes it.</li>
+        <li><strong>Settings</strong>: your theme choice (System, Light or Dark, and dynamic color) is saved in the app&apos;s private storage on your device, so it is there next time. If Android backup is on, this setting can be included in your device&apos;s own backup, which is handled by Google under your account, not by us. It contains no personal data.</li>
         <li><strong>No network</strong>: the app does not request the internet permission and makes no network requests.</li>
         <li><strong>No accounts, ads, analytics or tracking</strong>: the app contains no advertising, analytics, crash-reporting or tracking SDKs.</li>
       </ul>
@@ -35,6 +35,11 @@ export default function Privacy() {
       <p>
         This site is static. It sets no cookies and runs no analytics. The Morse demo runs in your browser; what you type is not sent
         anywhere. Like any web host, the hosting provider may keep standard server logs such as IP addresses.
+      </p>
+      <h2>Deleting your data</h2>
+      <p>
+        There is nothing for us to delete, because we hold no data about you. To remove the saved theme setting from your phone, clear the
+        app&apos;s storage in Android Settings or uninstall the app.
       </p>
       <h2>Children</h2>
       <p>The app collects no data from anyone, including children.</p>
